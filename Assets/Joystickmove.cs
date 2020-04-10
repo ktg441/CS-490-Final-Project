@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Joystickmove : MonoBehaviour
 {
@@ -18,12 +19,16 @@ public class Joystickmove : MonoBehaviour
         Vector2 stickstate = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
         if (stickstate[1] != 0)
         {
-            rb.AddForce(cm.transform.forward * stickstate[1] * 5f);
+            rb.AddForce(cm.transform.forward * stickstate[1] * 3f);
         }
         if(stickstate[0] != 0)
         {
-
-            rb.AddForce(cm.transform.right * stickstate[0] * 5f);
+            rb.AddForce(cm.transform.right * stickstate[0] * 3f);
+        }
+        if (this.transform.position.y < -10)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            
         }
     }
 }
