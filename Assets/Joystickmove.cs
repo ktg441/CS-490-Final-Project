@@ -7,6 +7,7 @@ public class Joystickmove : MonoBehaviour
 {
     public Camera cm;
     public Rigidbody rb;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,9 @@ public class Joystickmove : MonoBehaviour
         if (this.transform.position.y < -10)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            
         }
+        Vector3 self3 = transform.position;
+        self3.z = player.transform.position.z;
+        player.transform.position = self3;
     }
 }
