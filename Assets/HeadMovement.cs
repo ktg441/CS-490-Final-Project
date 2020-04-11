@@ -9,7 +9,7 @@ public class HeadMovement : MonoBehaviour
     public Rigidbody rb;
     public GameObject player;
 
-    public Quaternion init_rotation;
+    private Quaternion init_rotation;
     public float acceptable_range = 0.05f;
     // Start is called before the first frame update
     void Start()
@@ -25,11 +25,11 @@ public class HeadMovement : MonoBehaviour
         float z_dif = init_rotation.z - cm.transform.rotation.z;
         if (Mathf.Abs(x_dif) > acceptable_range)
         {
-            rb.AddForce(cm.transform.forward * x_dif * 3f);
+            rb.AddForce(cm.transform.forward * x_dif * 10f);
         }
         if (Mathf.Abs(z_dif) > acceptable_range)
         {
-            rb.AddForce(cm.transform.right * z_dif * 3f);
+            rb.AddForce(cm.transform.right * z_dif * 10f);
         }
         if (this.transform.position.y < -10)
         {
