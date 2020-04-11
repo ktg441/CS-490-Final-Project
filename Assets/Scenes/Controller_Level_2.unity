@@ -212,7 +212,7 @@ Transform:
   m_LocalScale: {x: 1.2222009, y: 0.27977496, z: 0.22451311}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &154578291
 GameObject:
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 170923360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 519efc58d8ecade4e884da77b8164257, type: 3}
+  m_Script: {fileID: 11500000, guid: e67fffc87586ea046bac34b783c12ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1863973500}
@@ -600,7 +600,7 @@ Transform:
   m_LocalScale: {x: 1.2222009, y: 1, z: 5.9555707}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 6.6250005, y: -90.00001, z: 0}
 --- !u!1 &535866775
 GameObject:
@@ -693,7 +693,7 @@ Transform:
   m_LocalScale: {x: 18.964245, y: 1, z: 12.066185}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -91.70801, z: 0}
 --- !u!1 &751059252
 GameObject:
@@ -1308,7 +1308,7 @@ GameObject:
   - component: {fileID: 1863973501}
   - component: {fileID: 1863973507}
   - component: {fileID: 1863973506}
-  - component: {fileID: 1863973505}
+  - component: {fileID: 1863973508}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1390,21 +1390,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1863973505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863973500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f423382438501974c9d832960fb4956b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cm: {fileID: 1364051172}
-  rb: {fileID: 1863973507}
-  player: {fileID: 1094924306}
 --- !u!64 &1863973506
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1435,6 +1420,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1863973508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863973500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f369ee1922717f47b7da5e047f32e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cm: {fileID: 1364051172}
+  rb: {fileID: 1863973507}
+  player: {fileID: 1094924306}
 --- !u!1 &1941156579
 GameObject:
   m_ObjectHideFlags: 0
