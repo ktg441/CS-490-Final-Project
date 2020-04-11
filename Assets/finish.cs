@@ -15,7 +15,7 @@ public class finish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Mathf.Abs(ball.transform.position.z - transform.position.z) < 0.5)
+        if((Mathf.Abs(ball.transform.position.z - transform.position.z) + Mathf.Abs(ball.transform.position.y - transform.position.y) + Mathf.Abs(ball.transform.position.x - transform.position.x)) < 2)
         {
             print("victory!");//change scene
             switch (SceneManager.GetActiveScene().name)

@@ -31,7 +31,7 @@ public class Joystickmove : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         Vector3 self3 = transform.position;
-        self3.z = player.transform.position.z;
+        //self3.y = player.transform.position.y;
         player.transform.position = self3;
     }
 }
