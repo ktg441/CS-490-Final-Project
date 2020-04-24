@@ -26,6 +26,42 @@ public class finish : MonoBehaviour
                 case "Controller_Level_2":
                     SceneManager.LoadScene("Controller_Level_3");
                     break;
+                case "Controller_Level_3":
+                    SceneManager.LoadScene("Controller_Level_4");
+                    break;
+                case "Controller_Level_4":
+                    SceneManager.LoadScene("Controller_Level_5");
+                    break;
+                case "Controller_Level_5":
+                    SceneManager.LoadScene("Controller_Level_6");
+                    break;
+                case "Controller_Level_6":
+                    SceneManager.LoadScene("Controller_Level_7");
+                    break;
+                case "Controller_Level_7":
+                    //Kick Back to load screen
+                    break;
+                case "Head_Tilt_Level_1":
+                    SceneManager.LoadScene("Head_Tilt_Level_2");
+                    break;
+                case "Head_Tilt_Level_2":
+                    SceneManager.LoadScene("Head_Tilt_Level_3");
+                    break;
+                case "Head_Tilt_Level_3":
+                    SceneManager.LoadScene("Head_Tilt_Level_4");
+                    break;
+                case "Head_Tilt_Level_4":
+                    SceneManager.LoadScene("Head_Tilt_Level_5");
+                    break;
+                case "Head_Tilt_Level_5":
+                    SceneManager.LoadScene("Head_Tilt_Level_6");
+                    break;
+                case "Head_Tilt_Level_6":
+                    SceneManager.LoadScene("Head_Tilt_Level_7");
+                    break;
+                case "Head_Tilt_Level_7":
+                    //Kick back to load screen
+                    break;
             }
         }
     }
