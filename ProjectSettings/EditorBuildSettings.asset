@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Controller_Level_2.unity
     guid: 9eef4eec3a73b5a4a8d1a216005f18c3
   - enabled: 1
-    path: Assets/Scenes/Head_Tilt_Level.unity
+    path: Assets/Scenes/Head_Tilt_Level_1.unity
     guid: d47502dd24914424d8d4810e1d2a53eb
   m_configObjects: {}
