@@ -3093,12 +3093,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1863973500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f369ee1922717f47b7da5e047f32e51, type: 3}
+  m_Script: {fileID: 11500000, guid: e6c931371bb189248a7d98f2de1ae4bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cm: {fileID: 1364051172}
   rb: {fileID: 1863973507}
   player: {fileID: 1094924306}
+  acceptable_range: 0.05
 --- !u!64 &1863973506
 MeshCollider:
   m_ObjectHideFlags: 0
