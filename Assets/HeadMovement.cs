@@ -33,6 +33,7 @@ public class HeadMovement : MonoBehaviour
         }
         if (this.transform.position.y < -10)
         {
+            GameObject.Find("Stats Canvas").GetComponent<Stats>().AddDeath();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         Vector3 self3 = transform.position;

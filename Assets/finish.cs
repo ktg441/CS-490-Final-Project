@@ -39,7 +39,8 @@ public class finish : MonoBehaviour
                     SceneManager.LoadScene("Controller_Level_7");
                     break;
                 case "Controller_Level_7":
-                    //Kick Back to load screen
+                    GameObject.Find("Stats Canvas").GetComponent<Stats>().BackToLogin("Controller");
+                    SceneManager.LoadScene("Login_Scene");
                     break;
                 case "Head_Tilt_Level_1":
                     SceneManager.LoadScene("Head_Tilt_Level_2");
@@ -60,7 +61,8 @@ public class finish : MonoBehaviour
                     SceneManager.LoadScene("Head_Tilt_Level_7");
                     break;
                 case "Head_Tilt_Level_7":
-                    //Kick back to load screen
+                    GameObject.Find("Stats Canvas").GetComponent<Stats>().BackToLogin("Head");
+                    SceneManager.LoadScene("Login_Scene");
                     break;
             }
         }

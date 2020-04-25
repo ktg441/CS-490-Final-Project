@@ -72,6 +72,7 @@ public class Joystickmove : MonoBehaviour
             }
             if (this.transform.position.y < -10)
             {
+                GameObject.Find("Stats Canvas").GetComponent<Stats>().AddDeath();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
