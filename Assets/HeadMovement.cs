@@ -21,6 +21,10 @@ public class HeadMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (this.transform.position.y < -10)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         float x_dif = cm.transform.rotation.x - init_rotation.x;
         float z_dif = init_rotation.z - cm.transform.rotation.z;
         if (Mathf.Abs(x_dif) > acceptable_range)

@@ -25,6 +25,10 @@ public class Joystickmove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (this.transform.position.y < -10)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
         Vector3 self3 = transform.position;
         //self3.y = player.transform.position.y;
