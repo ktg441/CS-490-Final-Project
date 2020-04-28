@@ -93,7 +93,7 @@ public class Stats : MonoBehaviour
     public void CompleteHead()
     {
         HeadComplete = true;
-        GameObject.Find("HeadTilt").GetComponentInChildren<Text>().text = timer.text + " and " + deaths + " deaths";
+        GameObject.Find("HeadTilt").GetComponentInChildren<Text>().text = (int)(time / 60) + ":" + (int)(time % 60) + " and " + death_counter.ToString() + " deaths";
         GameObject.Find("HeadTilt").GetComponent<Button>().interactable = false;
         time = 0f;
         death_counter = 0;

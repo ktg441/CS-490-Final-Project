@@ -10,7 +10,7 @@ public class HeadMovement : MonoBehaviour
     public GameObject player;
 
     private Quaternion init_rotation;
-    public float acceptable_range = 0.05f;
+    private float acceptable_range = 0.065f;
     // Start is called before the first frame update
     void Start()
     {
