@@ -1219,6 +1219,7 @@ MonoBehaviour:
   cm: {fileID: 1364051172}
   rb: {fileID: 1863973507}
   player: {fileID: 1094924306}
+  acceptable_range: 0.1
 --- !u!64 &1863973506
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -26,18 +26,25 @@ public class HeadMovement : MonoBehaviour
             GameObject.Find("Stats Canvas").GetComponent<Stats>().AddDeath();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        float x_dif = cm.transform.rotation.x - init_rotation.x;
-        float z_dif = init_rotation.z - cm.transform.rotation.z;
-        if (Mathf.Abs(x_dif) > acceptable_range)
-        {
-            rb.AddForce(cm.transform.forward * x_dif * 10f);
-        }
-        if (Mathf.Abs(z_dif) > acceptable_range)
-        {
-            rb.AddForce(cm.transform.right * z_dif * 10f);
-        }
+
         Vector3 self3 = transform.position;
         //self3.y = player.transform.position.y;
         player.transform.position = self3;
+        Debug.Log(cm.transform.rotation.z);
+
+        if (cm.transform.forward.y < -acceptable_range)
+        {
+            rb.AddForce(cm.transform.forward * 3f);
+        }
+        else if (cm.transform.forward.y > acceptable_range)
+        {
+            rb.AddForce(cm.transform.forward * -3f);
+        }
+
+        if (Mathf.Abs(cm.transform.rotation.z) > acceptable_range)
+        {
+            rb.AddForce(cm.transform.right * cm.transform.rotation.z * -10f);
+        }
+
     }
 }
