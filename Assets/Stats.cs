@@ -34,6 +34,10 @@ public class Stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameObject.GetComponent<Canvas>().worldCamera == null)
+        {
+            gameObject.GetComponent<Canvas>().worldCamera = GameObject.Find("CenterEyeAnchor").GetComponent<Camera>();
+        }
         if (BackFromHead && GameObject.Find("HeadTilt") != null)
         {
             BackFromHead = false;
@@ -50,7 +54,15 @@ public class Stats : MonoBehaviour
             return;
         }
         time += Time.deltaTime;
-        timer.text = (time / 60) + ":" + (time % 60);
+        if ((int)(time % 60) < 10)
+        {
+            timer.text = "Time: " + (int)(time / 60) + ":0" + (int)(time % 60);
+        }
+        else
+        {
+            timer.text = "Time: " + (int)(time / 60) + ":" + (int)(time % 60);
+        }
+        
     }
 
     public void BackToLogin(string level)
@@ -68,25 +80,27 @@ public class Stats : MonoBehaviour
     public void CompleteStick()
     {
         StickComplete = true;
-        GameObject.Find("Controller").GetComponentInChildren<Text>().text = timer + " and " + deaths + " deaths";
+        GameObject.Find("Controller").GetComponentInChildren<Text>().text = (int)(time / 60) + ":" + (int)(time % 60) + " and " + death_counter.ToString() + " deaths";
         GameObject.Find("Controller").GetComponent<Button>().interactable = false;
         time = 0f;
         death_counter = 0;
         start_timer = false;
         timer.text = "Timer: 0:00";
-        deaths.text = "0";
+        deaths.text = "Deaths: 0";
+        Destroy(gameObject);
     }
 
     public void CompleteHead()
     {
         HeadComplete = true;
-        GameObject.Find("HeadTilt").GetComponentInChildren<Text>().text = timer + " and " + deaths + " deaths";
+        GameObject.Find("HeadTilt").GetComponentInChildren<Text>().text = timer.text + " and " + deaths + " deaths";
         GameObject.Find("HeadTilt").GetComponent<Button>().interactable = false;
         time = 0f;
         death_counter = 0;
         start_timer = false;
         timer.text = "Timer: 0:00";
-        deaths.text = "0";
+        deaths.text = "Deaths: 0";
+        Destroy(gameObject);
     }
 
     public void StartTimer()
@@ -97,6 +111,6 @@ public class Stats : MonoBehaviour
     public void AddDeath()
     {
         death_counter++;
-        deaths.text = death_counter.ToString();
+        deaths.text = "Deaths: " + death_counter.ToString();
     }
 }

@@ -15,6 +15,39 @@ EditorBuildSettings:
     path: Assets/Scenes/Controller_Level_2.unity
     guid: 9eef4eec3a73b5a4a8d1a216005f18c3
   - enabled: 1
+    path: Assets/Scenes/Controller_Level_3.unity
+    guid: c8ccff12864ad804e8d20c79e445f6db
+  - enabled: 1
+    path: Assets/Scenes/Controller_Level_4.unity
+    guid: d6c98cba3c5bf4449bd0f23bd0cd365a
+  - enabled: 1
+    path: Assets/Scenes/Controller_Level_5.unity
+    guid: 606b1cffb84f1e74bb75e38e76d46e32
+  - enabled: 1
+    path: Assets/Scenes/Controller_Level_6.unity
+    guid: f41b02bba1fb769438e18f2aef5948f1
+  - enabled: 1
+    path: Assets/Scenes/Controller_Level_7.unity
+    guid: 4283e279d189e5b4786a914b20c6cffc
+  - enabled: 1
     path: Assets/Scenes/Head_Tilt_Level_1.unity
     guid: d47502dd24914424d8d4810e1d2a53eb
+  - enabled: 1
+    path: Assets/Scenes/Head_Tilt_Level_2.unity
+    guid: 8ab29b7e34127e0419e91aaf1efc968b
+  - enabled: 1
+    path: Assets/Scenes/Head_Tilt_Level_3.unity
+    guid: 97305312868e08b46a7229162847168e
+  - enabled: 1
+    path: Assets/Scenes/Head_Tilt_Level_4.unity
+    guid: c10cdb2377e8e3242b355dfda710e0cc
+  - enabled: 1
+    path: Assets/Scenes/Head_Tilt_Level_5.unity
+    guid: 8dcecfe589e88f14a88697d4efb30ce1
+  - enabled: 1
+    path: Assets/Scenes/Head_Tilt_Level_6.unity
+    guid: c5a7539f7a3fe714b825dae29471f27f
+  - enabled: 1
+    path: Assets/Scenes/Head_Tilt_Level_7.unity
+    guid: 9948f3acca8e34448b30d22af5ab29e3
   m_configObjects: {}

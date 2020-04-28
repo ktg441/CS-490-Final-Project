@@ -23,6 +23,7 @@ public class HeadMovement : MonoBehaviour
     {
         if (this.transform.position.y < -10)
         {
+            GameObject.Find("Stats Canvas").GetComponent<Stats>().AddDeath();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         float x_dif = cm.transform.rotation.x - init_rotation.x;
@@ -34,11 +35,6 @@ public class HeadMovement : MonoBehaviour
         if (Mathf.Abs(z_dif) > acceptable_range)
         {
             rb.AddForce(cm.transform.right * z_dif * 10f);
-        }
-        if (this.transform.position.y < -10)
-        {
-            GameObject.Find("Stats Canvas").GetComponent<Stats>().AddDeath();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         Vector3 self3 = transform.position;
         //self3.y = player.transform.position.y;

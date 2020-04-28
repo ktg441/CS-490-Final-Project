@@ -27,6 +27,7 @@ public class Joystickmove : MonoBehaviour
     {
         if (this.transform.position.y < -10)
         {
+            GameObject.Find("Stats Canvas").GetComponent<Stats>().AddDeath();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
@@ -74,11 +75,6 @@ public class Joystickmove : MonoBehaviour
             {
                 rb.AddForce(cm.transform.right * stickstate[0] * 3f);
             }
-            if (this.transform.position.y < -10)
-            {
-                GameObject.Find("Stats Canvas").GetComponent<Stats>().AddDeath();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
         }
-        }
+    }
 }
