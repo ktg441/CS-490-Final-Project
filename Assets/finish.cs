@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class finish : MonoBehaviour
 {
+    public AudioSource vic;
     public GameObject ball;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class finish : MonoBehaviour
     {
         if((Mathf.Abs(ball.transform.position.z - transform.position.z) + Mathf.Abs(ball.transform.position.y - transform.position.y) + Mathf.Abs(ball.transform.position.x - transform.position.x)) < 2)
         {
+            vic.Play(0);
             print("victory!");//change scene
             switch (SceneManager.GetActiveScene().name)
             {
